@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.local
+.env.production
+.env*.local
+dist/
+.next/
+.wrangler/
+out/
+*.log
+.DS_Store
+Thumbs.db
+.turbo/
+coverage/
+.cache/
+*.tsbuildinfo
