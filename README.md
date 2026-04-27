@@ -57,7 +57,7 @@ TypeScript + Hono  (Cloudflare Workers — 41 route files)
 |---|---|---|
 | API Runtime | TypeScript + Hono | 41 route files, Cloudflare edge runtime |
 | Hosting | Cloudflare Workers | Serverless, globally distributed, zero cold starts |
-| Database | Cloudflare D1 (SQLite) | 30+ tables, 58 schema migrations |
+| Database | Cloudflare D1 (SQLite) | 30+ tables, 60 schema migrations |
 | File Storage | Cloudflare R2 | Audio, covers, avatars, banners, HLS segments, nightly backups |
 | AI | Cloudflare Workers AI | `@cf/baai/bge-base-en-v1.5` recommendations; content moderation |
 | Real-time | Durable Objects (DMRoom) | Per-conversation WebSocket + SQLite isolate |
@@ -196,7 +196,7 @@ Accounts soft-delete with a 30-day grace period for recovery. A nightly cron job
 
 ## Database Schema Highlights
 
-**30+ tables, 58 migrations**
+**30+ tables, 60 migrations**
 
 - `user_profiles` — subscription tier, Stripe IDs, handle, verified status, accent colors, soft-delete
 - `tracks` — HLS status, bitrate, waveform, exclusive flag, soft-delete
