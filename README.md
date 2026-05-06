@@ -8,9 +8,9 @@
 ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=flat&logo=sentry&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-**Edge-native social music platform for independent and underground artists.**
+**Full-stack social platform built entirely on Cloudflare's edge. 150+ API routes, real-time WebSocket DMs via Durable Objects, AI-powered content moderation, and Stripe subscription tiers — zero cold starts, globally distributed.**
 
-> Built and operated as a solo full-stack project. Every system — from auth to audio streaming to AI-powered moderation — runs on Cloudflare's edge with zero cold starts and globally distributed latency.
+> Designed and operated as a solo engineering project. Every system — auth, audio streaming, rate limiting, AI moderation, and real-time messaging — runs on Cloudflare Workers with no traditional server infrastructure.
 
 ---
 
