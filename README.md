@@ -39,7 +39,7 @@ Next.js 15  (SSR · App Router · API proxy)
   ▼  Authorization: Bearer <API_KEY>
 TypeScript + Hono  (Cloudflare Workers — 41 route files)
   │
-  ├── D1 (SQLite relational store — 30+ tables, 64 migrations)
+  ├── D1 (SQLite relational store — 30+ tables, 67 migrations)
   ├── R2 (audio · covers · avatars · banners · HLS segments · nightly backups)
   ├── Workers AI (track + user recommendations · content moderation · report auto-research)
   ├── Durable Objects (real-time DM WebSockets — per-conversation SQLite isolates)
@@ -196,7 +196,7 @@ Accounts soft-delete with a 30-day grace period for recovery. A nightly cron job
 
 ## Database Schema Highlights
 
-**30+ tables, 64 migrations**
+**30+ tables, 67 migrations**
 
 - `user_profiles` — subscription tier, Stripe IDs, handle, verified status, accent colors, soft-delete
 - `tracks` — HLS status, bitrate, waveform, exclusive flag, soft-delete
@@ -219,6 +219,15 @@ Indexes on all foreign keys, filter columns, and ORDER BY fields. CHECK constrai
 4. Scheduled post auto-publishing
 5. Nightly D1 → R2 backup (midnight UTC, 26 tables)
 6. Hard-delete expired soft-deleted accounts (1am UTC, full cascade + R2 cleanup)
+
+---
+
+## Recent Additions
+
+- Migrations 065–067: audit fixes for smoke test URL guard and fans route limit clamp
+- audit:ci script added — production-only high-severity npm audit checks
+- Discover route added to public-GET whitelist (proxy fix)
+- Feed and Underground+ verified working end-to-end (P0s retired)
 
 ---
 
