@@ -14,20 +14,6 @@
 
 ---
 
-## Table of Contents
-
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [7 Core Systems](#7-core-systems)
-- [API Surface](#api-surface-150-routes-41-route-files)
-- [Security Architecture](#security-architecture)
-- [Key Engineering Decisions](#key-engineering-decisions)
-- [Database Schema Highlights](#database-schema-highlights)
-- [Cron Jobs](#cron-jobs)
-- [Running This](#running-this)
-
----
-
 ## Architecture
 
 ```
@@ -59,7 +45,7 @@ TypeScript + Hono  (Cloudflare Workers — 41 route files)
 | Hosting | Cloudflare Workers | Serverless, globally distributed, zero cold starts |
 | Database | Cloudflare D1 (SQLite) | 30+ tables, 64 schema migrations |
 | File Storage | Cloudflare R2 | Audio, covers, avatars, banners, HLS segments, nightly backups |
-| AI | Cloudflare Workers AI | `@cf/baai/bge-base-en-v1.5` recommendations; content moderation |
+| AI | Cloudflare Workers AI | Recommendations; content moderation |
 | Real-time | Durable Objects (DMRoom) | Per-conversation WebSocket + SQLite isolate |
 | Rate Limiting | Workers Rate Limiting API | 4 durable namespaces, cross-isolate, restart-safe |
 | Payments | Stripe | Subscription tiers + webhooks |
@@ -231,32 +217,10 @@ Indexes on all foreign keys, filter columns, and ORDER BY fields. CHECK constrai
 
 ---
 
-## Running This
-
-```bash
-cd packages/underground-api
-npm install
-
-# Local dev
-npm run dev          # wrangler dev
-
-# Type check
-npm run typecheck    # tsc --noEmit
-
-# Tests
-npm run test         # vitest
-
-# Deploy
-npm run deploy       # wrangler deploy
-
-# Apply DB migrations
-wrangler d1 migrations apply underground-db --remote
-```
-
-See `.dev.vars.example` for the full list of required environment variables.
-
----
-
 ## License
 
 MIT — see [LICENSE](LICENSE)
+
+---
+
+*Built by Frxncois — not open source.*
