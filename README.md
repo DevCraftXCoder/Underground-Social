@@ -54,7 +54,7 @@ Browser
 - **Real-time DMs** via Durable Objects — each conversation gets its own SQLite isolate + WebSocket handler
 - **HLS multi-bitrate audio** streaming with R2 edge cache and Cache API TTL
 - **GDPR-compliant account deletion** — soft delete + 30-day hard purge cron, cascades through 30+ tables + R2
-- **Content moderation pipeline** — sync keyword filter + async Workers AI analysis
+- **Content moderation pipeline** — sync keyword filter + async Workers LLM analysis
 - **Cursor-based pagination** everywhere — no OFFSET, stable under concurrent writes
 - **CSRF protection** — `X-Requested-With` header required on all state-changing routes
 - **Web Push notifications** — VAPID key subscribe/unsubscribe built, delivery pipeline ready
