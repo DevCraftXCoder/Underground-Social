@@ -46,7 +46,7 @@ Browser
 4. **Messaging System** — DM inbox + real-time WebSocket via Durable Objects + message requests
 5. **Notification System** — in-app, Web Push (VAPID), announcements, dismissals
 6. **Auth & Identity System** — JWT rotation, Google/Discord OAuth, GDPR export, soft delete
-7. **Admin & Platform System** — moderation queue, AI auto-research, uptime monitoring, nightly backups
+7. **Admin & Platform System** — moderation queue, automated research, uptime monitoring, nightly backups
 
 ## Key Engineering Details
 
