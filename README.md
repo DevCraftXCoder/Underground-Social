@@ -7,7 +7,7 @@
 
 **Edge-native social music platform for independent and underground artists.**
 
-> A full social platform built entirely on Cloudflare's edge network — 41 route files, 68 D1 migrations, 30+ tables, real-time WebSocket DMs via Durable Objects, zero cold starts globally.
+> A full social platform built entirely on Cloudflare's edge network — 42 route files, 84 D1 migrations, 30+ tables, real-time WebSocket DMs via Durable Objects, zero cold starts globally.
 
 ## Architecture
 
@@ -15,7 +15,7 @@
 Browser
   └── Next.js 15 (SSR + API proxy)
         └── Hono Worker (Cloudflare Workers)
-              ├── D1 SQLite (68 migrations, 30+ tables)
+              ├── D1 SQLite (84 migrations, 30+ tables)
               ├── R2 (audio, covers, HLS segments, nightly backups)
               ├── Durable Objects (real-time DM WebSockets)
               ├── Workers AI (recommendations, content moderation)
@@ -27,9 +27,9 @@ Browser
 
 | Layer | Technology |
 |-------|-----------|
-| API | TypeScript + Hono (41 route files) |
+| API | TypeScript + Hono (42 route files) |
 | Hosting | Cloudflare Workers — globally distributed, no cold starts |
-| Database | Cloudflare D1 (SQLite) — 68 migrations, 30+ tables |
+| Database | Cloudflare D1 (SQLite) — 84 migrations, 30+ tables |
 | File Storage | Cloudflare R2 — audio, covers, HLS segments, nightly backups |
 | AI | Cloudflare Workers AI — recommendations + content moderation |
 | Real-time | Durable Objects — per-conversation WebSocket isolates |
@@ -63,8 +63,8 @@ Browser
 
 | Metric | Count |
 |--------|-------|
-| Route files | 41 |
-| D1 migrations | 68 |
+| Route files | 42 |
+| D1 migrations | 84 |
 | D1 tables | 30+ |
 | Auth providers | 3 (email, Google, Discord) |
 | Rate limiter namespaces | 4 (cross-isolate, durable) |
